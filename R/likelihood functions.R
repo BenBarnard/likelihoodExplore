@@ -9,8 +9,11 @@
 #' @export
 #'
 #' @examples liknorm(rnorm(4), 0, 1)
-liknorm <- function(data, mu, sigma, log = TRUE, constants = FALSE){
+liknorm <- function(data, ..., log = TRUE){
   n <- length(data)
+  params <- list(...)
+  if(length(params) == 0){mu <- mean(data)}else{mu <- params$mu}
+  if(length(params) == 0){sigma <- sd(data)}else{sigma <- params$sigma}
 
   if(log == TRUE){
     (-n / 2) * log(2 * pi * sigma ^ 2) +
