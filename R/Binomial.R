@@ -5,10 +5,8 @@
 #' @param prob probability of success on each trial
 #' @param log logical; if TRUE, output is the log likelihood
 #'
-#' @return
 #' @export
 #'
-#' @examples likbinom(rbinom(4, 1, .9), 1, .9)
 fbinomlik <- function(data, size, prob, log = TRUE){
 
 }
@@ -21,10 +19,8 @@ fbinomlik <- function(data, size, prob, log = TRUE){
 #' @param prob probability of success on each trial
 #' @param log logical; if TRUE, output is the log likelihood
 #'
-#' @return
 #' @export
 #'
-#' @examples likbinom(rbinom(4, 1, .9), 1, .9)
 rbinomlik <- function(data, size, prob, log = TRUE){
 
 }
