@@ -1,7 +1,23 @@
-## Likelihood Explore
+# Likelihood Explore
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/likelihoodExplore)](https://cran.r-project.org/package=likelihoodExplore)
 [![Travis-CI Build Status](https://travis-ci.org/BenBarnard/likelihoodExplore.svg?branch=master)](https://travis-ci.org/BenBarnard/likelihoodExplore)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/BenBarnard/likelihoodExplore?branch=master&svg=true)](https://ci.appveyor.com/project/BenBarnard/likelihoodExplore)
 [![Coverage Status](https://img.shields.io/codecov/c/github/BenBarnard/likelihoodExplore/master.svg)](https://codecov.io/github/BenBarnard/likelihoodExplore?branch=master)
 
+## Overview
+
+likelihoodExplore is meant to be an educational package to explore likelihood functions and likelihoodbased methods.
+
+## Installation
+
+You can install the latest development version from github with
+
+```{r}
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("benbarnard/likelihoodExplore")
+```
+
+If you encounter a clear bug, please file a minimal reproducible example on github.
