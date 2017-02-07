@@ -10,10 +10,6 @@ likelihood(density, ...)
 \item{density}{density function used}
 
 \item{...}{other options}
-
-\item{data}{vector of data points}
-
-\item{log}{logical if log values are used}
 }
 \description{
 Likelihood Function

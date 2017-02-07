@@ -1,9 +1,7 @@
 #' Likelihood Function
 #'
-#' @param data vector of data points
 #' @param ... other options
 #' @param density density function used
-#' @param log logical if log values are used
 #'
 #' @importFrom lazyeval lazy_dots
 #' @importFrom lazyeval lazy_eval
