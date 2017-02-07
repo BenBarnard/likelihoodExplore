@@ -4,14 +4,14 @@
 \alias{likelihood}
 \title{Likelihood Function}
 \usage{
-likelihood(data, density, ..., log = TRUE)
+likelihood(density, ...)
 }
 \arguments{
-\item{data}{vector of data points}
-
 \item{density}{density function used}
 
 \item{...}{other options}
+
+\item{data}{vector of data points}
 
 \item{log}{logical if log values are used}
 }
