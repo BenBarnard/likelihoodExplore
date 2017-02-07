@@ -18,4 +18,3 @@ fbinomlik(data, size, prob, log = TRUE)
 \description{
 Binomial Likelihood Function
 }
-

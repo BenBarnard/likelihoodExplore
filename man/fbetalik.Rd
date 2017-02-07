@@ -18,4 +18,3 @@ fbetalik(data, a, b, log = TRUE)
 \description{
 Beta Likelihood Function
 }
-

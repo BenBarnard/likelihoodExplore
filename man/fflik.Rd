@@ -18,4 +18,3 @@ fflik(data, df1, df2, log = TRUE)
 \description{
 F Likelihood Function
 }
-

@@ -16,4 +16,3 @@ rexplik(data, rate, log = TRUE)
 \description{
 Exponential Likelihood Function
 }
-

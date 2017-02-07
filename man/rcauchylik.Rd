@@ -18,4 +18,3 @@ rcauchylik(data, location, scale, log = TRUE)
 \description{
 Cauchy Likelihood Function
 }
-

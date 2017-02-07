@@ -7,5 +7,7 @@ Maintainer: Ben Barnard <ben_barnard@baylor.edu>
 Description: Likelihood educational exploration for distribution likelihoods and likelihood based methods.
 License: GPL-2
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.0
 Suggests: covr
+Depends: lazyeval,
+         plyr

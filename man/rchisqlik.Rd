@@ -16,4 +16,3 @@ rchisqlik(data, df, log = TRUE)
 \description{
 Chi-Squared Likelihood Function
 }
-

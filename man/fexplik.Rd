@@ -16,4 +16,3 @@ fexplik(data, rate, log = TRUE)
 \description{
 Exponential Likelihood Function
 }
-
