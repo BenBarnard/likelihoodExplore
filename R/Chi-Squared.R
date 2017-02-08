@@ -1,23 +1,10 @@
+source("R/likelihood.R")
 #' Chi-Squared Likelihood Function
 #'
-#' @param data vector of data points
-#' @param df degrees of freedom
-#' @param log logical; if TRUE, output is the log likelihood
-#'
+#' @inheritParams stats::dchisq
+#' @importFrom lazyeval lazy_dots
+#' @importFrom lazyeval lazy_eval
+#' @importFrom plyr llply
 #' @export
 #'
-fchisqlik <- function(data, df, log = TRUE){
-
-}
-
-#' Chi-Squared Likelihood Function
-#'
-#' @param data vector of data points
-#' @param df degrees of freedom
-#' @param log logical; if TRUE, output is the log likelihood
-#'
-#' @export
-#'
-rchisqlik <- function(data, df, log = TRUE){
-
-}
+likchisq <- likelihood(dchisq)
