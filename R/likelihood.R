@@ -25,7 +25,7 @@ likelihood <- function(density, ...){
 func <- function(){
   unevalcallparams <- as.list(match.call())[-1]
   params <- lapply(unevalcallparams,
-                   function(x){eval(x, parent.frame(n = 3))})
+                   function(y){eval(y, parent.frame(n = 3))})
   if("x" %in% names(params)){
     x <- params$x
     params <- params[!(names(params) == "x")]
