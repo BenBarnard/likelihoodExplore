@@ -1,24 +1,10 @@
+source("R/likelihood.R")
 #' Exponential Likelihood Function
 #'
-#' @param data vector of data points
-#' @param rate rate of the exponential where the mean is 1 / rate
-#' @param log logical; if TRUE, output is the log likelihood
-#'
+#' @inheritParams stats::dexp
+#' @importFrom lazyeval lazy_dots
+#' @importFrom lazyeval lazy_eval
+#' @importFrom plyr llply
 #' @export
 #'
-fexplik <- function(data, rate, log = TRUE){
-
-}
-
-
-#' Exponential Likelihood Function
-#'
-#' @param data vector of data points
-#' @param rate rate of the exponential where the mean is 1 / rate
-#' @param log logical; if TRUE, output is the log likelihood
-#'
-#' @export
-#'
-rexplik <- function(data, rate, log = TRUE){
-
-}
+likexp <- likelihood(dexp)
