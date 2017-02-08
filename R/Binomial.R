@@ -1,26 +1,11 @@
+source("R/likelihood.R")
 #' Binomial Likelihood Function
 #'
-#' @param data vector of data points
-#' @param size number of bernoulli trials
-#' @param prob probability of success on each trial
-#' @param log logical; if TRUE, output is the log likelihood
-#'
+#' @inheritParams stats::dbinom
+#' @importFrom lazyeval lazy_dots
+#' @importFrom lazyeval lazy_eval
+#' @importFrom plyr llply
 #' @export
 #'
-fbinomlik <- function(data, size, prob, log = TRUE){
+likbinom <- likelihood(dbinom)
 
-}
-
-
-#' Binomial Likelihood Function
-#'
-#' @param data vector of data points
-#' @param size number of bernoulli trials
-#' @param prob probability of success on each trial
-#' @param log logical; if TRUE, output is the log likelihood
-#'
-#' @export
-#'
-rbinomlik <- function(data, size, prob, log = TRUE){
-
-}
