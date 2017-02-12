@@ -9,16 +9,16 @@
 #' @export
 #'
 likelihood <- function(density, ...){
-  dots <- lazy_dots(...)
+  dots <- lazyeval::lazy_dots(...)
   arguments <- do.call(formals, list(fun = density))
   parameters <- names(arguments[!(names(arguments) %in%
                                     c(names(dots)))])
   if("x" %in% names(dots)){
-    x <- lazy_eval(dots$x)
+    x <- lazyeval::lazy_eval(dots$x)
     dots <- dots[!(names(dots) == "x")]
   }
   if("log" %in% names(dots)){
-    log <- lazy_eval(dots$log)
+    log <- lazyeval::lazy_eval(dots$log)
     dots <- dots[!(names(dots) == "log")]
   }
 
@@ -40,16 +40,16 @@ func <- function(){
     log <- log
   }
   if(log == TRUE){
-    value <- Reduce(`+`, do.call(llply, args = c(list(.data = x,
+    value <- Reduce(`+`, do.call(plyr::llply, args = c(list(.data = x,
                                              .fun = density,
                                              log = TRUE),
-                                          lazy_eval(dots),
+                                             lazyeval::lazy_eval(dots),
                                           params)))
   }else{
-    value <- Reduce(`*`, do.call(llply, args = c(list(.data = x,
+    value <- Reduce(`*`, do.call(plyr::llply, args = c(list(.data = x,
                                                .fun = density,
                                                log = FALSE),
-                                          lazy_eval(dots),
+                                               lazyeval::lazy_eval(dots),
                                           params)))
   }
   value

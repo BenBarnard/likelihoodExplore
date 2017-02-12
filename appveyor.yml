@@ -13,6 +13,10 @@ install:
 # Adapt as necessary starting from here
 
 build_script:
+  - travis-tool.sh install_github dkahle/chi
+  - travis-tool.sh install_github dkahle/dirichlet
+  - travis-tool.sh install_github dkahle/invgamma
+  - travis-tool.sh install_github dkahle/betalu
   - travis-tool.sh install_deps
 
 test_script:
