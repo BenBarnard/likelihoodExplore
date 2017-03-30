@@ -1,0 +1,12 @@
+---
+title: This is My Title I hope it is Long enough to Fill the Page
+author:
+  - name: Author One
+    affiliation: Affiliation
+  - name: Author Two
+    affiliation: Affiliation
+output: pdfposter::pdf_poster
+classoption: landscape
+logo: Rlogo.png
+margin: 0.5in
+---
