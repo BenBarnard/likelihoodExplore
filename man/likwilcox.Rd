@@ -4,7 +4,7 @@
 \alias{likwilcox}
 \title{Wilcox Likelihood Function}
 \usage{
-likwilcox(x, m, n, log = FALSE)
+likwilcox(x, m, n, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

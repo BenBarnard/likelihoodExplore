@@ -4,7 +4,7 @@
 \alias{likt}
 \title{Student t Likelihood Function}
 \usage{
-likt(x, df, ncp, log = FALSE)
+likt(x, df, ncp, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

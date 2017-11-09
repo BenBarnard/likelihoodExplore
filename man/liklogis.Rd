@@ -4,7 +4,7 @@
 \alias{liklogis}
 \title{Logistic Likelihood Function}
 \usage{
-liklogis(x, location = 0, scale = 1, log = FALSE)
+liklogis(x, location = 0, scale = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

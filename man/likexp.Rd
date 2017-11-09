@@ -4,7 +4,7 @@
 \alias{likexp}
 \title{Exponential Likelihood Function}
 \usage{
-likexp(x, rate = 1, log = FALSE)
+likexp(x, rate = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

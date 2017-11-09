@@ -4,7 +4,7 @@
 \alias{likmultinom}
 \title{Multinomial Likelihood Function}
 \usage{
-likmultinom(x, size = NULL, prob, log = FALSE)
+likmultinom(x, size = NULL, prob, log = TRUE)
 }
 \arguments{
 \item{x}{vector of length \eqn{K} of integers in \code{0:size}.}

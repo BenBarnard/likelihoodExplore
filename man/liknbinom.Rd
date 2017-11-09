@@ -4,7 +4,7 @@
 \alias{liknbinom}
 \title{Negative Binomial Likelihood Function}
 \usage{
-liknbinom(x, size, prob, mu, log = FALSE)
+liknbinom(x, size, prob, mu, log = TRUE)
 }
 \arguments{
 \item{x}{vector of (non-negative integer) quantiles.}

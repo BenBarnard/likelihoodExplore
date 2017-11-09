@@ -4,7 +4,7 @@
 \alias{likbeta}
 \title{Beta Likelihood Function}
 \usage{
-likbeta(x, shape1, shape2, ncp = 0, log = FALSE)
+likbeta(x, shape1, shape2, ncp = 0, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

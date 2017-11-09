@@ -4,7 +4,7 @@
 \alias{likgeom}
 \title{Geometric Likelihood Function}
 \usage{
-likgeom(x, prob, log = FALSE)
+likgeom(x, prob, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles representing the number of failures in

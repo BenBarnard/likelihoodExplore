@@ -4,7 +4,7 @@
 \alias{likchisq}
 \title{Chi-Squared Likelihood Function}
 \usage{
-likchisq(x, df, ncp = 0, log = FALSE)
+likchisq(x, df, ncp = 0, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

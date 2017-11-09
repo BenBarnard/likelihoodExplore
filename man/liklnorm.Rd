@@ -4,7 +4,7 @@
 \alias{liklnorm}
 \title{Log Normal Likelihood Function}
 \usage{
-liklnorm(x, meanlog = 0, sdlog = 1, log = FALSE)
+liklnorm(x, meanlog = 0, sdlog = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

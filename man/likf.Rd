@@ -4,7 +4,7 @@
 \alias{likf}
 \title{F Likelihood Function}
 \usage{
-likf(x, df1, df2, ncp, log = FALSE)
+likf(x, df1, df2, ncp, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

@@ -4,7 +4,7 @@
 \alias{likpois}
 \title{Poisson Likelihood Function}
 \usage{
-likpois(x, lambda, log = FALSE)
+likpois(x, lambda, log = TRUE)
 }
 \arguments{
 \item{x}{vector of (non-negative integer) quantiles.}

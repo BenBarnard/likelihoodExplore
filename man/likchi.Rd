@@ -4,7 +4,7 @@
 \alias{likchi}
 \title{Chi Likelihood Function}
 \usage{
-likchi(x, df, ncp = 0, log = FALSE)
+likchi(x, df, ncp = 0, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

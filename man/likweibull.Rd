@@ -4,7 +4,7 @@
 \alias{likweibull}
 \title{Weibull Likelihood Function}
 \usage{
-likweibull(x, shape, scale = 1, log = FALSE)
+likweibull(x, shape, scale = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

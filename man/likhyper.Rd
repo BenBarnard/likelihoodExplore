@@ -4,7 +4,7 @@
 \alias{likhyper}
 \title{Hypergeometric Likelihood Function}
 \usage{
-likhyper(x, m, n, k, log = FALSE)
+likhyper(x, m, n, k, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles representing the number of white balls

@@ -1,4 +1,4 @@
-#' Likelihood Function
+#' Log Likelihood Function
 #'
 #' @param ... other options
 #' @param density density function used
@@ -11,8 +11,9 @@
 likelihood <- function(density, ...){
   dots <- lazyeval::lazy_dots(...)
   arguments <- do.call(formals, list(fun = density))
-  parameters <- names(arguments[!(names(arguments) %in%
-                                    c(names(dots)))])
+  parameters <- c(names(arguments[!(names(arguments) %in%
+                                    c(names(dots)))]), "log")
+  arguments$log <- TRUE
   if("x" %in% names(dots)){
     x <- lazyeval::lazy_eval(dots$x)
     dots <- dots[!(names(dots) == "x")]
@@ -35,8 +36,7 @@ func <- function(){
   if ("log" %in% names(params)) {
     log <- params$log
     params <- params[!(names(params) == "log")]
-  }
-  else {
+  }else{
     log <- log
   }
   if(log == TRUE){

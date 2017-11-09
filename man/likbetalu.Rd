@@ -4,7 +4,7 @@
 \alias{likbetalu}
 \title{Betalu Likelihood Function}
 \usage{
-likbetalu(x, shape1, shape2, l = 0, u = 1, ncp = 0, log = FALSE)
+likbetalu(x, shape1, shape2, l = 0, u = 1, ncp = 0, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

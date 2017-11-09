@@ -4,7 +4,7 @@
 \alias{likunif}
 \title{Uniform Likelihood Function}
 \usage{
-likunif(x, min = 0, max = 1, log = FALSE)
+likunif(x, min = 0, max = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

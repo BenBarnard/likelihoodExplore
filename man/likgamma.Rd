@@ -4,7 +4,7 @@
 \alias{likgamma}
 \title{Gamma Likelihood Function}
 \usage{
-likgamma(x, shape, rate = 1, scale = 1/rate, log = FALSE)
+likgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

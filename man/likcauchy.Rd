@@ -4,7 +4,7 @@
 \alias{likcauchy}
 \title{Cauchy Likelihood Function}
 \usage{
-likcauchy(x, location = 0, scale = 1, log = FALSE)
+likcauchy(x, location = 0, scale = 1, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

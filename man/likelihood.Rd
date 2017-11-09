@@ -2,7 +2,7 @@
 % Please edit documentation in R/likelihood.R
 \name{likelihood}
 \alias{likelihood}
-\title{Likelihood Function}
+\title{Log Likelihood Function}
 \usage{
 likelihood(density, ...)
 }
@@ -12,5 +12,5 @@ likelihood(density, ...)
 \item{...}{other options}
 }
 \description{
-Likelihood Function
+Log Likelihood Function
 }

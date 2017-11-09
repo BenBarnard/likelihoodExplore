@@ -4,7 +4,7 @@
 \alias{likdirichlet}
 \title{Dirichlet Likelihood Function}
 \usage{
-likdirichlet(x, alpha, log = FALSE)
+likdirichlet(x, alpha, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

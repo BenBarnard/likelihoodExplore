@@ -4,7 +4,7 @@
 \alias{likinvgamma}
 \title{Inverse Gamma Likelihood Function}
 \usage{
-likinvgamma(x, shape, rate = 1, scale = 1/rate, log = FALSE)
+likinvgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}

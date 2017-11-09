@@ -4,7 +4,7 @@
 \alias{likbinom}
 \title{Binomial Likelihood Function}
 \usage{
-likbinom(x, size, prob, log = FALSE)
+likbinom(x, size, prob, log = TRUE)
 }
 \arguments{
 \item{x}{vector of quantiles.}
