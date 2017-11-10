@@ -2,7 +2,7 @@
 % Please edit documentation in R/likelihood.R
 \name{likelihood}
 \alias{likelihood}
-\title{Log Likelihood Function}
+\title{Log Likelihood Function Maker}
 \usage{
 likelihood(density, ...)
 }
@@ -11,6 +11,18 @@ likelihood(density, ...)
 
 \item{...}{other options}
 }
+\value{
+A function that is the log likelihood function from density function
+density.
+}
 \description{
-Log Likelihood Function
+Function that creates a log likelihood function given a density function
+density.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likelihood(dnorm, x = rnorm(100))
+
 }

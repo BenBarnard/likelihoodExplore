@@ -2,7 +2,7 @@
 % Please edit documentation in R/Chi-Squared.R
 \name{likchisq}
 \alias{likchisq}
-\title{Chi-Squared Likelihood Function}
+\title{Chi-Squared Log Likelihood Function}
 \usage{
 likchisq(x, df, ncp = 0, log = TRUE)
 }
@@ -15,6 +15,19 @@ likchisq(x, df, ncp = 0, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the chi-squared density
+given the data where df and ncp can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Chi-Squared Likelihood Function
+The log likelihood of a chi-squared density with data, x, df and ncp
+parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likchisq(x = rchisq(n = 2, df = 4),
+        df = 4)
 }

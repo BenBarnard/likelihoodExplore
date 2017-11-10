@@ -2,7 +2,7 @@
 % Please edit documentation in R/Negative_Binomial.R
 \name{liknbinom}
 \alias{liknbinom}
-\title{Negative Binomial Likelihood Function}
+\title{Negative Binomial Log Likelihood Function}
 \usage{
 liknbinom(x, size, prob, mu, log = TRUE)
 }
@@ -19,6 +19,19 @@ liknbinom(x, size, prob, mu, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the negative binomial
+density given the data where size, prob, and mu can be held constant or if
+vector were given vector will be returned.
+}
 \description{
-Negative Binomial Likelihood Function
+The log likelihood of a negative binomial density with data, x, size, prob
+and mu parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+liknbinom(x = rnbinom(n = 2, size = 3, prob = .4),
+        size = 3, prob = .4)
 }

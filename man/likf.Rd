@@ -2,7 +2,7 @@
 % Please edit documentation in R/F.R
 \name{likf}
 \alias{likf}
-\title{F Likelihood Function}
+\title{F Log Likelihood Function}
 \usage{
 likf(x, df1, df2, ncp, log = TRUE)
 }
@@ -17,6 +17,18 @@ likf(x, df1, df2, ncp, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the f density given the
+data where df1, df2, and ncp can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-F Likelihood Function
+The log likelihood of a F density with data, x, df1, df2 and ncp parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likf(x = rf(n = 2, df1 = 3, df2 = 4),
+        df1 = 3, df2 = 4)
 }

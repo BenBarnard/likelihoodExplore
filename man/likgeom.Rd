@@ -2,7 +2,7 @@
 % Please edit documentation in R/Geometric.R
 \name{likgeom}
 \alias{likgeom}
-\title{Geometric Likelihood Function}
+\title{Geometric Log Likelihood Function}
 \usage{
 likgeom(x, prob, log = TRUE)
 }
@@ -14,6 +14,18 @@ likgeom(x, prob, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the geometric density
+given the data where prob can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Geometric Likelihood Function
+The log likelihood of a geometric density with data, x, prob parameter.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likgeom(x = rgeom(n = 2, prob = .4),
+        prob = .4)
 }

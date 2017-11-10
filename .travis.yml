@@ -3,5 +3,16 @@
 language: R
 sudo: false
 cache: packages
+os:
+  - linux
+  - osx
+r:
+  - release
+  - oldrel
+  - devel
 after_success:
   - Rscript -e 'covr::codecov()'
+matrix:
+  exclude:
+    - r: devel
+      os: osx

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Dirichlet.R
 \name{likdirichlet}
 \alias{likdirichlet}
-\title{Dirichlet Likelihood Function}
+\title{Dirichlet Log Likelihood Function}
 \usage{
 likdirichlet(x, alpha, log = TRUE)
 }
@@ -15,6 +15,19 @@ positive entries)}
 \item{log}{logical; if TRUE, probabilities p are given as 
 log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the dirichlet density
+given the data where alpha can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Dirichlet Likelihood Function
+The log likelihood of a dirichlet density with data, x, alpha parameter.
+}
+\details{
+The log likelihood is the log of a function of parameters given the
+data.
+}
+\examples{
+likdirichlet(x = dirichlet::rdirichlet(n = 2, alpha = 4),
+        alpha = 4)
 }

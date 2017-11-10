@@ -2,7 +2,7 @@
 % Please edit documentation in R/Exponential.R
 \name{likexp}
 \alias{likexp}
-\title{Exponential Likelihood Function}
+\title{Exponential Log Likelihood Function}
 \usage{
 likexp(x, rate = 1, log = TRUE)
 }
@@ -13,6 +13,17 @@ likexp(x, rate = 1, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the exponential density
+given the data where rate can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Exponential Likelihood Function
+The log likelihood of a exponential density with data, x, rate parameter.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likexp(x = rexp(n = 2))
 }

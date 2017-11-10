@@ -2,7 +2,7 @@
 % Please edit documentation in R/Log_Normal.R
 \name{liklnorm}
 \alias{liklnorm}
-\title{Log Normal Likelihood Function}
+\title{Log Normal Log Likelihood Function}
 \usage{
 liklnorm(x, meanlog = 0, sdlog = 1, log = TRUE)
 }
@@ -17,6 +17,18 @@ liklnorm(x, meanlog = 0, sdlog = 1, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the log normal density
+given the data where meanlog and sdlog can be held constant or if vector were
+given vector will be returned.
+}
 \description{
-Log Normal Likelihood Function
+The log likelihood of a log normal density with data, x, meanlog and sdlog
+parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+liklnorm(x = rlnorm(n = 2))
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Betalu.R
 \name{likbetalu}
 \alias{likbetalu}
-\title{Betalu Likelihood Function}
+\title{General Support Beta Log Likelihood Function}
 \usage{
 likbetalu(x, shape1, shape2, l = 0, u = 1, ncp = 0, log = TRUE)
 }
@@ -21,6 +21,20 @@ likbetalu(x, shape1, shape2, l = 0, u = 1, ncp = 0, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the general support beta
+density given the data where shape1, shape2, l, u, and ncp can be held
+constant or if vector were given vector will be returned.
+}
 \description{
-Betalu Likelihood Function
+The log likelihood of a general support beta density with data, x, shape1, shape2,
+l, u, and ncp parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likbetalu(x = betalu::rbetalu(n = 2, shape1 = 3, shape2 = 4),
+          shape1 = 3, shape2 = 4)
+
 }

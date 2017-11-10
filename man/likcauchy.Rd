@@ -2,7 +2,7 @@
 % Please edit documentation in R/Cauchy.R
 \name{likcauchy}
 \alias{likcauchy}
-\title{Cauchy Likelihood Function}
+\title{Cauchy Log Likelihood Function}
 \usage{
 likcauchy(x, location = 0, scale = 1, log = TRUE)
 }
@@ -15,6 +15,18 @@ likcauchy(x, location = 0, scale = 1, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the Cauchy density given
+the data where location and scale can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Cauchy Likelihood Function
+The log likelihood of a Cauchy density with data, x, location and scale
+parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likcauchy(x = rcauchy(n = 2))
 }

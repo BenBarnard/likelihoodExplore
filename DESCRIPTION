@@ -1,10 +1,13 @@
 Package: likelihoodExplore
 Type: Package
-Title: Likelihood Education Explore
+Title: Likelihood Exploration
 Version: 0.1.0
 Authors@R: c(person("Ben", "Barnard", email = "ben_barnard@baylor.edu", role = c("aut", "cre")))
 Maintainer: Ben Barnard <ben_barnard@baylor.edu>
-Description: Likelihood educational exploration for distribution likelihoods and likelihood based methods.
+Description: A package of likelihood functions and a function that creates 
+    likelihood functions from density functions. The functions are meant to aid 
+    in education of likelihood based methods. Included shiny app leverages 
+    likelihood functions to explore likelihood based methods.
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1

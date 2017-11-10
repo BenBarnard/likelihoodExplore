@@ -2,7 +2,7 @@
 % Please edit documentation in R/Inv_Gamma.R
 \name{likinvgamma}
 \alias{likinvgamma}
-\title{Inverse Gamma Likelihood Function}
+\title{Inverse Gamma Log Likelihood Function}
 \usage{
 likinvgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 }
@@ -18,6 +18,18 @@ likinvgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 \item{log}{logical; if TRUE, probabilities p are given as
 log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the inverse gamma density
+given the data where shape, rate, and scale can be held constant or if vector
+were given vector will be returned.
+}
 \description{
-Inverse Gamma Likelihood Function
+The log likelihood of a inverse gamma density with data, x, shape, rate and
+ scale parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likinvgamma(x = invgamma::rinvgamma(n = 2, shape = 3), shape = 3)
 }

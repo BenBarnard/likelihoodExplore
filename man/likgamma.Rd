@@ -2,7 +2,7 @@
 % Please edit documentation in R/Gamma.R
 \name{likgamma}
 \alias{likgamma}
-\title{Gamma Likelihood Function}
+\title{Gamma Log Likelihood Function}
 \usage{
 likgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 }
@@ -20,6 +20,19 @@ likgamma(x, shape, rate = 1, scale = 1/rate, log = TRUE)
 \item{log}{logical; if \code{TRUE}, probabilities/densities \eqn{p}
     are returned as \eqn{log(p)}.}
 }
+\value{
+A numeric scalar for the log likelihood of the gamma density given the
+data where shape, scale, and rate can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Gamma Likelihood Function
+The log likelihood of a gamma density with data, x, shape, rate
+and scale parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likgamma(x = rgamma(n = 2, shape = 3),
+        shape = 3)
 }

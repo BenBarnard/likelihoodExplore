@@ -2,7 +2,7 @@
 % Please edit documentation in R/Uniform.R
 \name{likunif}
 \alias{likunif}
-\title{Uniform Likelihood Function}
+\title{Uniform Log Likelihood Function}
 \usage{
 likunif(x, min = 0, max = 1, log = TRUE)
 }
@@ -15,6 +15,18 @@ likunif(x, min = 0, max = 1, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the uniform density given
+the data where min and max can be held constant or if vector were given
+vector will be returned.
+}
 \description{
-Uniform Likelihood Function
+The log likelihood of a uniform density with data, x, min and max parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the
+data.
+}
+\examples{
+likunif(x = runif(n = 2))
 }

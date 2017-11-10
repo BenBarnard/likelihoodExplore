@@ -1,12 +1,22 @@
-#' Log Likelihood Function
+#' Log Likelihood Function Maker
 #'
-#' @param ... other options
+#' Function that creates a log likelihood function given a density function
+#' density.
+#'
 #' @param density density function used
+#' @param ... other options
 #'
 #' @importFrom lazyeval lazy_dots
 #' @importFrom lazyeval lazy_eval
 #' @importFrom plyr llply
 #' @export
+#'
+#' @details The log likelihood is the log of a function of parameters given the data.
+#'
+#' @return A function that is the log likelihood function from density function
+#' density.
+#'
+#' @examples likelihood(dnorm, x = rnorm(100))
 #'
 likelihood <- function(density, ...){
   dots <- lazyeval::lazy_dots(...)

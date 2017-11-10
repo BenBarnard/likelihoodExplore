@@ -2,7 +2,7 @@
 % Please edit documentation in R/Multinomial.R
 \name{likmultinom}
 \alias{likmultinom}
-\title{Multinomial Likelihood Function}
+\title{Multinomial Log Likelihood Function}
 \usage{
 likmultinom(x, size = NULL, prob, log = TRUE)
 }
@@ -19,6 +19,19 @@ likmultinom(x, size = NULL, prob, log = TRUE)
 
 \item{log}{logical; if TRUE, log probabilities are computed.}
 }
+\value{
+A numeric scalar for the log likelihood of the multinomial density
+given the data where size and prob can be held constant or if vector were
+given vector will be returned.
+}
 \description{
-Multinomial Likelihood Function
+The log likelihood of a multinomial density with data, x, size and prob
+parameters.
+}
+\details{
+The log likelihood is the log of a function of parameters given the data.
+}
+\examples{
+likmultinom(x = rmultinom(n = 2, size = 3, prob = .4),
+        size = 3, prob = .4)
 }

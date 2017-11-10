@@ -2,7 +2,7 @@
 % Please edit documentation in R/Poisson.R
 \name{likpois}
 \alias{likpois}
-\title{Poisson Likelihood Function}
+\title{Poisson Log Likelihood Function}
 \usage{
 likpois(x, lambda, log = TRUE)
 }
@@ -13,6 +13,19 @@ likpois(x, lambda, log = TRUE)
 
 \item{log}{logical; if TRUE, probabilities p are given as log(p).}
 }
+\value{
+A numeric scalar for the log likelihood of the Poisson density given
+the data where lambda can be held constant or if vector were given vector
+will be returned.
+}
 \description{
-Poisson Likelihood Function
+The log likelihood of a Poisson density with data, x, lambda parameter.
+}
+\details{
+The log likelihood is the log of a function of parameters given the
+data.
+}
+\examples{
+likpois(x = rpois(n = 2, lambda = 4),
+        lambda = 4)
 }
