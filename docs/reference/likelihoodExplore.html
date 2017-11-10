@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Normal Log Likelihood Function — liknorm • likelihoodExplore</title>
+<title>Likelihood Exploration — likelihoodExplore • likelihoodExplore</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -77,62 +77,23 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Normal Log Likelihood Function</h1>
+    <h1>Likelihood Exploration</h1>
     </div>
 
     
-    <p>The log likelihood of a normal density with data, x, mean and sd parameters.</p>
+    <p>A package of likelihood functions and a function that creates
+likelihood functions from density functions. The functions are meant to aid
+in education of likelihood based methods. Included shiny app leverages
+likelihood functions to explore likelihood based methods.</p>
     
 
-    <pre class="usage"><span class='fu'>liknorm</span>(<span class='no'>x</span>, <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>sd</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p>vector of quantiles.</p></td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td><p>vector of means.</p></td>
-    </tr>
-    <tr>
-      <th>sd</th>
-      <td><p>vector of standard deviations.</p></td>
-    </tr>
-    <tr>
-      <th>log</th>
-      <td><p>logical; if TRUE, probabilities p are given as log(p).</p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+        
 
-    <p>A numeric scalar for the log likelihood of the normal density given
-the data where mean and sd can be held constant or if vector were given
-vector will be returned.</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>The log likelihood is the log of a function of parameters given the
-data.</p>
-    
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>liknorm</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>rnorm</span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>2</span>))</div><div class='output co'>#&gt; [1] -2.103998</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+                </ul>
 
   </div>
 </div>

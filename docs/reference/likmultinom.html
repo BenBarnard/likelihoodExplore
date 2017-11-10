@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Multinomial Likelihood Function — likmultinom • likelihoodExplore</title>
+<title>Multinomial Log Likelihood Function — likmultinom • likelihoodExplore</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -23,14 +23,17 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+
   </head>
 
   <body>
@@ -74,38 +77,67 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Multinomial Likelihood Function</h1>
+    <h1>Multinomial Log Likelihood Function</h1>
     </div>
 
     
-    <p>Multinomial Likelihood Function</p>
+    <p>The log likelihood of a multinomial density with data, x, size and prob
+parameters.</p>
     
 
-    <pre><span class='fu'>likmultinom</span>(<span class='no'>x</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>prob</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>likmultinom</span>(<span class='no'>x</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>prob</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
-    <dl class="dl-horizontal">
-      <dt>x</dt>
-      <dd>vector of length \(K\) of integers in <code>0:size</code>.</dd>
-      <dt>size</dt>
-      <dd>integer, say \(N\), specifying the total number
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>vector of length \(K\) of integers in <code>0:size</code>.</p></td>
+    </tr>
+    <tr>
+      <th>size</th>
+      <td><p>integer, say \(N\), specifying the total number
     of objects that are put into \(K\) boxes in the typical multinomial
-    experiment. For <code>dmultinom</code>, it defaults to <code>sum(x)</code>.</dd>
-      <dt>prob</dt>
-      <dd>numeric non-negative vector of length \(K\), specifying
+    experiment. For <code>dmultinom</code>, it defaults to <code>sum(x)</code>.</p></td>
+    </tr>
+    <tr>
+      <th>prob</th>
+      <td><p>numeric non-negative vector of length \(K\), specifying
     the probability for the \(K\) classes; is internally normalized to
-    sum 1. Infinite and missing values are not allowed.</dd>
-      <dt>log</dt>
-      <dd>logical; if TRUE, log probabilities are computed.</dd>
-    </dl>
+    sum 1. Infinite and missing values are not allowed.</p></td>
+    </tr>
+    <tr>
+      <th>log</th>
+      <td><p>logical; if TRUE, log probabilities are computed.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A numeric scalar for the log likelihood of the multinomial density
+given the data where size and prob can be held constant or if vector were
+given vector will be returned.</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The log likelihood is the log of a function of parameters given the data.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>likmultinom</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'>rmultinom</span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>.4</span>),
+        <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>.4</span>)</div><div class='output co'>#&gt; [1] 0</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-                </ul>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
