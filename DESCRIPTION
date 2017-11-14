@@ -4,7 +4,7 @@ Title: Likelihood Exploration
 Version: 0.1.0
 Authors@R: c(person("Ben", "Barnard", email = "ben_barnard@outlook.com", role = c("aut", "cre")))
 Maintainer: Ben Barnard <ben_barnard@outlook.com>
-Description: A package of likelihood functions as defined by Fisher 
+Description: Provides likelihood functions as defined by Fisher (1922)
     <doi:10.1098/rsta.1922.0009> and a function that creates likelihood 
     functions from density functions. The functions are meant to aid in 
     education of likelihood based methods.
