@@ -13,13 +13,5 @@ LazyData: TRUE
 RoxygenNote: 6.0.1
 Suggests: covr
 Imports: lazyeval,
-         plyr,
-         dirichlet,
-         betalu,
-         chi,
-         invgamma
-Remotes: dkahle/dirichlet,
-         dkahle/betalu,
-         dkahle/chi,
-         dkahle/invgamma
+         plyr
 URL: https://likelihoodExplore.bearstatistics.com
