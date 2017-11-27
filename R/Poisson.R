@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Poisson Log Likelihood Function
 #'
 #' The log likelihood of a Poisson density with data, x, lambda parameter.
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' will be returned.
 #'
 #' @inheritParams stats::dpois
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likpois(x = rpois(n = 2, lambda = 4),
 #'         lambda = 4)

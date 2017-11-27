@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Cauchy Log Likelihood Function
 #'
 #' The log likelihood of a Cauchy density with data, x, location and scale
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dcauchy
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likcauchy(x = rcauchy(n = 2))
 likcauchy <- likelihood(dcauchy)

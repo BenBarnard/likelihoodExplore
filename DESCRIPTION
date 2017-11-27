@@ -1,7 +1,7 @@
 Package: likelihoodExplore
 Type: Package
 Title: Likelihood Exploration
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Ben", "Barnard", email = "ben_barnard@outlook.com", role = c("aut", "cre")))
 Maintainer: Ben Barnard <ben_barnard@outlook.com>
 Description: Provides likelihood functions as defined by Fisher (1922)
@@ -10,8 +10,31 @@ Description: Provides likelihood functions as defined by Fisher (1922)
     education of likelihood based methods.
 License: GPL-2
 LazyData: TRUE
+BugReports: https://github.com/BenBarnard/likelihoodExplore/issues
 RoxygenNote: 6.0.1
 Suggests: covr
 Imports: lazyeval,
          plyr
 URL: https://likelihoodExplore.bearstatistics.com
+Collate: 
+    'likelihood.R'
+    'Beta.R'
+    'Binomial.R'
+    'Cauchy.R'
+    'Chi-Squared.R'
+    'Exponential.R'
+    'F.R'
+    'Gamma.R'
+    'Geometric.R'
+    'Hypergeometric.R'
+    'Log_Normal.R'
+    'Logistic.R'
+    'Multinomial.R'
+    'Negative_Binomial.R'
+    'Normal.R'
+    'Poisson.R'
+    'Student_t.R'
+    'Uniform.R'
+    'Weibull.R'
+    'Wilcox.R'
+    'likelihoodExplore-package.R'

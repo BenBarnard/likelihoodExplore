@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Beta Log Likelihood Function
 #'
 #' The log likelihood of a beta density with data, x, shape1, shape2
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dbeta
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likbeta(x = rbeta(n = 2, shape1 = 3, shape2 = 4),
 #'         shape1 = 3, shape2 = 4)

@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Normal Log Likelihood Function
 #'
 #' The log likelihood of a normal density with data, x, mean and sd parameters.
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dnorm
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples liknorm(x = rnorm(n = 2))
 liknorm <- likelihood(dnorm)

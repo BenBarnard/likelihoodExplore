@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Negative Binomial Log Likelihood Function
 #'
 #' The log likelihood of a negative binomial density with data, x, size, prob
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector were given vector will be returned.
 #'
 #' @inheritParams stats::dnbinom
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples liknbinom(x = rnbinom(n = 2, size = 3, prob = .4),
 #'         size = 3, prob = .4)

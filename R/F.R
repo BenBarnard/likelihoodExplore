@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' F Log Likelihood Function
 #'
 #' The log likelihood of a F density with data, x, df1, df2 and ncp parameters.
@@ -10,10 +9,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::df
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likf(x = rf(n = 2, df1 = 3, df2 = 4),
 #'         df1 = 3, df2 = 4)

@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Chi-Squared Log Likelihood Function
 #'
 #' The log likelihood of a chi-squared density with data, x, df and ncp
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dchisq
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likchisq(x = rchisq(n = 2, df = 4),
 #'         df = 4)

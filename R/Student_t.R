@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Student's t Log Likelihood Function
 #'
 #' The log likelihood of a Student's t density with data, x, df and ncp
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dt
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likt(x = rt(n = 2, df = 4),
 #'         df = 4)

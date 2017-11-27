@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Binomial Log Likelihood Function
 #'
 #' The log likelihood of a binomial density with data, x, size and prob
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dbinom
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likbinom(x = rbinom(n = 2, size = 3, prob = .4),
 #'         size = 3, prob = .4)

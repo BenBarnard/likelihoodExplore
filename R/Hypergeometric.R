@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Hypergeometric Log Likelihood Function
 #'
 #' The log likelihood of a hypergeometric density with data, x, m, n and k
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dhyper
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likhyper(x = rhyper(nn = 2, m = 3, n = 4, k = 2),
 #'         m = 3, n = 4, k = 2)

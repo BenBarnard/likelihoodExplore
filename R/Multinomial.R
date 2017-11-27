@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Multinomial Log Likelihood Function
 #'
 #' The log likelihood of a multinomial density with data, x, size and prob
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' given vector will be returned.
 #'
 #' @inheritParams stats::dmultinom
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likmultinom(x = rmultinom(n = 2, size = 3, prob = .4),
 #'         size = 3, prob = .4)

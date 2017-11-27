@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Wilcoxon Rank Sum Log Likelihood Function
 #'
 #' The log likelihood of a Wilcoxon rank sum density with data, x, m and n
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' given vector will be returned.
 #'
 #' @inheritParams stats::dwilcox
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likwilcox(x = rwilcox(nn = 2, m = 3, n = 4),
 #'         m = 3, n = 4)

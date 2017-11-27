@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Logistic Log Likelihood Function
 #'
 #' The log likelihood of a logistic density with data, x, location and scale
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dlogis
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples liklogis(x = rlogis(n = 2))
 liklogis <- likelihood(dlogis)

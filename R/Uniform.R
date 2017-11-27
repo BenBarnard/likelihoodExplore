@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Uniform Log Likelihood Function
 #'
 #' The log likelihood of a uniform density with data, x, min and max parameters.
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dunif
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likunif(x = runif(n = 2))
 likunif <- likelihood(dunif)

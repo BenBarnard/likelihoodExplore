@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Geometric Log Likelihood Function
 #'
 #' The log likelihood of a geometric density with data, x, prob parameter.
@@ -10,10 +9,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dgeom
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likgeom(x = rgeom(n = 2, prob = .4),
 #'         prob = .4)

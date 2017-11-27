@@ -1,4 +1,3 @@
-source("R/likelihood.R")
 #' Weibull Log Likelihood Function
 #'
 #' The log likelihood of a Weibull density with data, x, shape and scale
@@ -11,10 +10,9 @@ source("R/likelihood.R")
 #' vector will be returned.
 #'
 #' @inheritParams stats::dweibull
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
 #' @export
+#'
+#' @include likelihood.R
 #'
 #' @examples likweibull(x = rweibull(n = 2, shape = 3),
 #'         shape = 3)
