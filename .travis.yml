@@ -24,7 +24,7 @@ matrix:
         on:
           branch: devel
         local_dir: ${TRAVIS_BUILD_DIR}/docs
-        target_branch: devel-web
+        target_branch: developmental
     - r: release
       os: osx
   exclude:
