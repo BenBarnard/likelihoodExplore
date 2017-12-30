@@ -2,9 +2,8 @@
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/likelihoodExplore)](https://cran.r-project.org/package=likelihoodExplore)
 [![CRAN_Downloads_Badge](http://cranlogs.r-pkg.org/badges/grand-total/likelihoodExplore)](http://cranlogs.r-pkg.org/badges/grand-total/likelihoodExplore)
-[![Travis-CI Build Status](https://travis-ci.org/BenBarnard/likelihoodExplore.svg?branch=master)](https://travis-ci.org/BenBarnard/likelihoodExplore)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/BenBarnard/likelihoodExplore?branch=master&svg=true)](https://ci.appveyor.com/project/BenBarnard/likelihoodExplore)
-[![codecov](https://codecov.io/gh/BenBarnard/likelihoodExplore/branch/master/graph/badge.svg)](https://codecov.io/gh/BenBarnard/likelihoodExplore)
+[![Travis-CI Build Status](https://travis-ci.org/BenBarnard/likelihoodExplore.svg?branch=devel)](https://travis-ci.org/BenBarnard/likelihoodExplore)
+[![codecov](https://codecov.io/gh/BenBarnard/likelihoodExplore/branch/devel/graph/badge.svg)](https://codecov.io/gh/BenBarnard/likelihoodExplore)
 
 ## Overview
 
