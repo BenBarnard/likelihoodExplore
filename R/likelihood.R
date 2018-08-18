@@ -1,4 +1,4 @@
-#' Log Likelihood Function Maker
+#' Likelihood Function Maker
 #'
 #' Function that creates a log likelihood function given a density function
 #' density.
@@ -6,9 +6,14 @@
 #' @param density density function used
 #' @param ... other options
 #'
-#' @importFrom lazyeval lazy_dots
-#' @importFrom lazyeval lazy_eval
-#' @importFrom plyr llply
+#' @importFrom rlang expr
+#' @importFrom rlang enexpr
+#' @importFrom rlang enexprs
+#' @importFrom rlang new_function
+#' @importFrom rlang invoke
+#' @importFrom rlang env_get_list
+#' @importFrom purrr map
+#'
 #' @export
 #'
 #' @details The log likelihood is the log of a function of parameters given the data.
@@ -19,51 +24,51 @@
 #' @examples likelihood(dnorm, x = rnorm(100))
 #'
 likelihood <- function(density, ...){
-  dots <- lazyeval::lazy_dots(...)
-  arguments <- do.call(formals, list(fun = density))
-  parameters <- c(names(arguments[!(names(arguments) %in%
-                                    c(names(dots)))]), "log")
-  arguments$log <- TRUE
-  if("x" %in% names(dots)){
-    x <- lazyeval::lazy_eval(dots$x)
-    dots <- dots[!(names(dots) == "x")]
-  }
-  if("log" %in% names(dots)){
-    log <- lazyeval::lazy_eval(dots$log)
-    dots <- dots[!(names(dots) == "log")]
+  stopifnot(is.function(density))
+  userArguments <- enexprs(...)
+  density <- enexpr(density)
+
+
+  densityArguments <- invoke(formals, density)
+
+  userArgNames <- names(userArguments)
+  densityArgNames <- names(densityArguments)
+
+  stopifnot(userArgNames %in% densityArgNames)
+
+  userLogPos <- userArgNames == "log"
+  densityLogPos <- densityArgNames == "log"
+
+  missUserArgPos <- !(densityArgNames %in% userArgNames)
+  missingUserArguments <- densityArguments[missUserArgPos]
+  missingUserArguments <- missingUserArguments[!(names(missingUserArguments) == "log")]
+
+  if(any(userLogPos)){
+    logArg <- userArguments[userLogPos]
+    userArguments <- userArguments[!(userLogPos)]
+    arguments <- c(missingUserArguments, userArguments, logArg)
+  }else{
+    logArg <- densityArguments[densityLogPos]
+    densityArguments <- densityArguments[!(densityLogPos)]
+    arguments <- c(missingUserArguments, userArguments, logArg)
   }
 
-func <- function(){
-  unevalcallparams <- as.list(match.call())[-1]
-  params <- lapply(unevalcallparams,
-                   function(y){eval(y, parent.frame(n = 3))})
-  if("x" %in% names(params)){
-    x <- params$x
-    params <- params[!(names(params) == "x")]
-  }else{
-    x <- x
+  func <- new_function(arguments, expr({
+    form <- env_get_list(nms = ls())
+    if(log == TRUE){
+      value <- Reduce(`+`, rlang::invoke(map, c(.x = list(x),
+                                                .f = expr(!!density),
+                                                form[!(names(form) %in% "x")])))
+    }else if(log == FALSE){
+      value <- Reduce(`*`, rlang::invoke(map, c(.x = list(x),
+                                                .f = expr(!!density),
+                                                form[!(names(form) %in% "x")])))
+    }else{
+      stop(paste0("The log value: ", log, " will not work. Please specify either TURE or FALSE"))
+    }
+    value
   }
-  if ("log" %in% names(params)) {
-    log <- params$log
-    params <- params[!(names(params) == "log")]
-  }else{
-    log <- log
-  }
-  if(log == TRUE){
-    value <- Reduce(`+`, do.call(plyr::llply, args = c(list(.data = x,
-                                             .fun = density,
-                                             log = TRUE),
-                                             lazyeval::lazy_eval(dots),
-                                          params)))
-  }else{
-    value <- Reduce(`*`, do.call(plyr::llply, args = c(list(.data = x,
-                                               .fun = density,
-                                               log = FALSE),
-                                               lazyeval::lazy_eval(dots),
-                                          params)))
-  }
-  value
-}
-  formals(func) <- arguments[names(arguments) %in% parameters]
+  ))
+
   func
 }

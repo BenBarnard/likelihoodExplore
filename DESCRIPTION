@@ -11,10 +11,10 @@ Description: Provides likelihood functions as defined by Fisher (1922)
 License: GPL-2
 LazyData: TRUE
 BugReports: https://github.com/BenBarnard/likelihoodExplore/issues
-RoxygenNote: 6.0.1
-Suggests: covr
-Imports: lazyeval,
-         plyr
+RoxygenNote: 6.1.0
+Imports: 
+    rlang,
+    purrr
 URL: https://github.com/BenBarnard/likelihoodExplore
 Collate: 
     'likelihood.R'
