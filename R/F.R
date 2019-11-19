@@ -14,5 +14,5 @@
 #' @include likelihood.R
 #'
 #' @examples likf(x = rf(n = 2, df1 = 3, df2 = 4),
-#'         df1 = 3, df2 = 4)
+#'         df1 = 3, df2 = 4, ncp = 0)
 likf <- likelihood(df)

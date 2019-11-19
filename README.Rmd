@@ -1,7 +1,11 @@
+---
+output: github_document
+---
+
 # Likelihood Explore
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/likelihoodExplore)](https://cran.r-project.org/package=likelihoodExplore)
-[![CRAN_Downloads_Badge](http://cranlogs.r-pkg.org/badges/grand-total/likelihoodExplore)](http://cranlogs.r-pkg.org/badges/grand-total/likelihoodExplore)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/likelihoodExplore)](https://cran.r-project.org/package=likelihoodExplore)
 [![Travis-CI Build Status](https://travis-ci.org/BenBarnard/likelihoodExplore.svg?branch=master)](https://travis-ci.org/BenBarnard/likelihoodExplore)
 [![codecov](https://codecov.io/gh/BenBarnard/likelihoodExplore/branch/master/graph/badge.svg)](https://codecov.io/gh/BenBarnard/likelihoodExplore)
 
@@ -13,7 +17,7 @@ likelihoodExplore is meant to be an educational package to explore likelihood fu
 
 You can install the latest development version from github with
 
-```{r}
+```{r, eval = FALSE}
 if (packageVersion("devtools") < 1.6) {
   install.packages("devtools")
 }

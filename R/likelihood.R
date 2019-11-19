@@ -6,12 +6,7 @@
 #' @param density density function used
 #' @param ... other options
 #'
-#' @importFrom rlang expr
-#' @importFrom rlang enexpr
-#' @importFrom rlang enexprs
-#' @importFrom rlang new_function
-#' @importFrom rlang invoke
-#' @importFrom rlang env_get_list
+#' @importFrom rlang expr enexpr enexprs new_function invoke env_get sym set_names
 #' @importFrom purrr map
 #'
 #' @export
@@ -24,6 +19,7 @@
 #' @examples likelihood(dnorm, x = rnorm(100))
 #'
 likelihood <- function(density, ...){
+
   stopifnot(is.function(density))
   userArguments <- enexprs(...)
   density <- enexpr(density)
@@ -39,28 +35,45 @@ likelihood <- function(density, ...){
   userLogPos <- userArgNames == "log"
   densityLogPos <- densityArgNames == "log"
 
+  userXPos <- userArgNames == "x"
+  densityXPos <- densityArgNames == "x"
+
   missUserArgPos <- !(densityArgNames %in% userArgNames)
   missingUserArguments <- densityArguments[missUserArgPos]
-  missingUserArguments <- missingUserArguments[!(names(missingUserArguments) == "log")]
+  missingUserArguments <- missingUserArguments[!(names(missingUserArguments) %in% c("log", "x"))]
 
   if(any(userLogPos)){
     logArg <- userArguments[userLogPos]
     userArguments <- userArguments[!(userLogPos)]
-    arguments <- c(missingUserArguments, userArguments, logArg)
   }else{
     logArg <- densityArguments[densityLogPos]
-    densityArguments <- densityArguments[!(densityLogPos)]
-    arguments <- c(missingUserArguments, userArguments, logArg)
   }
 
+  if(any(userXPos)){
+    XArg <- userArguments[userXPos]
+    userArguments <- userArguments[!(userXPos)]
+  }else{
+    XArg <- densityArguments[densityXPos]
+  }
+
+
+
+  arguments <- c(missingUserArguments, userArguments, XArg, logArg)
+
   func <- new_function(arguments, expr({
-    form <- env_get_list(nms = ls())
+
+    form <- map(set_names(ls(), ls()), function(x){
+      tryCatch(env_get(nm = x, inherit = TRUE),
+               error = function(cnd){NULL})
+      })
+    form <- form[!sapply(form, is.null)]
+
     if(log == TRUE){
-      value <- Reduce(`+`, rlang::invoke(map, c(.x = list(x),
+      value <- Reduce(`+`, rlang::invoke(map, c(.x = list(!!sym("x")),
                                                 .f = expr(!!density),
                                                 form[!(names(form) %in% "x")])))
     }else if(log == FALSE){
-      value <- Reduce(`*`, rlang::invoke(map, c(.x = list(x),
+      value <- Reduce(`*`, rlang::invoke(map, c(.x = list(!!sym("x")),
                                                 .f = expr(!!density),
                                                 form[!(names(form) %in% "x")])))
     }else{
@@ -69,6 +82,5 @@ likelihood <- function(density, ...){
     value
   }
   ))
-
   func
 }

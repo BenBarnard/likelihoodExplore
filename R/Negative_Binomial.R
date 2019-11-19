@@ -15,5 +15,5 @@
 #' @include likelihood.R
 #'
 #' @examples liknbinom(x = rnbinom(n = 2, size = 3, prob = .4),
-#'         size = 3, prob = .4)
+#'         size = 3, prob = .4, mu = NULL)
 liknbinom <- likelihood(dnbinom)

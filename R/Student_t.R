@@ -14,6 +14,7 @@
 #'
 #' @include likelihood.R
 #'
+#'
 #' @examples likt(x = rt(n = 2, df = 4),
 #'         df = 4)
 likt <- likelihood(dt)

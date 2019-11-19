@@ -2,8 +2,8 @@ Package: likelihoodExplore
 Type: Package
 Title: Likelihood Exploration
 Version: 0.1.1
-Authors@R: c(person("Ben", "Barnard", email = "ben_barnard@outlook.com", role = c("aut", "cre")))
-Maintainer: Ben Barnard <ben_barnard@outlook.com>
+Authors@R: c(person("Ben", "Barnard", email = "benbarnard87@gmail.com", role = c("aut", "cre")))
+Maintainer: Ben Barnard <benbarnard87@gmail.com>
 Description: Provides likelihood functions as defined by Fisher (1922)
     <doi:10.1098/rsta.1922.0009> and a function that creates likelihood 
     functions from density functions. The functions are meant to aid in 
@@ -11,11 +11,12 @@ Description: Provides likelihood functions as defined by Fisher (1922)
 License: GPL-2
 LazyData: TRUE
 BugReports: https://github.com/BenBarnard/likelihoodExplore/issues
-RoxygenNote: 6.1.0
+Encoding: UTF-8
 Imports: 
     rlang,
     purrr
 URL: https://github.com/BenBarnard/likelihoodExplore
+RoxygenNote: 6.1.1
 Collate: 
     'likelihood.R'
     'Beta.R'
