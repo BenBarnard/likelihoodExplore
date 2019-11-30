@@ -15,7 +15,7 @@ Encoding: UTF-8
 Imports: 
     rlang,
     purrr
-URL: https://github.com/BenBarnard/likelihoodExplore
+URL: https://www.bearstatistics.com/likelihoodExplore
 RoxygenNote: 6.1.1
 Collate: 
     'likelihood.R'
